@@ -50,8 +50,9 @@ While True:
             decryption.append(mlist[i]-klist[i])
         new=[]
         for i in decryption:
-            if i>=(len(association)-1):
-                multiple=
+            if i>=(len(associations)-1):
+                multiple=i//len(associations)+1
+                new
             new.append(associations[i])
         new="".join(new)
         print(new)
