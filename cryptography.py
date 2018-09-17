@@ -27,11 +27,17 @@ While True:
         times=len(mlist)/len(klist)+1
         klist=int(times)*klist
         encryption=[]
-        for i in range(0,len(mlist)):
+        for i in range(0,len(mlist)-1):
             encryption.append(mlist[i]+klist[i])
         new=[]
+        count(len(associations))
         for i in encryption:
-            new.append(associations[i])
+            if i>=(count-1):
+                multiple=i//count+1
+                num=i-multiple*count
+                new.append(associations[num])
+            else:
+                new.append(associations[i])
         new="".join(new)
         print(new)
     elif inpt=='d':
@@ -46,14 +52,16 @@ While True:
         times=len(mlist)/len(klist)+1
         klist=int(times)*klist
         decryption=[]
-        for i in range(0,len(mlist)):
+        for i in range(0,len(mlist)-1):
             decryption.append(mlist[i]-klist[i])
         new=[]
+        count(len(associations))
         for i in decryption:
-            if i>=(len(associations)-1):
-                multiple=i//len(associations)+1
-                new
-            new.append(associations[i])
+            if i<0:
+                num=(count-1)+i
+                new.append(associations[num])
+            else:
+                new.append(associations[i])
         new="".join(new)
         print(new)
     else:
