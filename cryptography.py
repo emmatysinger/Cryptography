@@ -27,7 +27,7 @@ while True:
         times=len(mlist)/len(klist)+1
         klist=int(times)*klist
         encryption=[]
-        for i in range(0,len(mlist)-1):
+        for i in range(0,len(mlist)):
             encryption.append(mlist[i]+klist[i])
         new=[]
         count=(len(associations))
@@ -51,9 +51,11 @@ while True:
             klist.append(associations.find(i))
         times=len(mlist)/len(klist)+1
         klist=int(times)*klist
+        #print(klist)
         decryption=[]
-        for i in range(0,len(mlist)-1):
+        for i in range(0,len(mlist)):
             decryption.append(mlist[i]-klist[i])
+        #print(decryption)
         new=[]
         count=(len(associations))
         for i in decryption:
@@ -62,8 +64,10 @@ while True:
                 new.append(associations[num])
             else:
                 new.append(associations[i])
+        #print(new)
         new="".join(new)
         print(new)
+        break
     else:
         print("Did not understand command, try again")
         continue
