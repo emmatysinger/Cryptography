@@ -60,7 +60,7 @@ while True:
         count=(len(associations))
         for i in decryption:
             if i<0:
-                num=(count-1)+i
+                num=(count)+i
                 new.append(associations[num])
             else:
                 new.append(associations[i])
