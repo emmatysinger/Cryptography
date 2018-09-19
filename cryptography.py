@@ -10,7 +10,7 @@ Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
-While True:
+while True:
     inpt=input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if inpt=='q':
         print("Goodbye")
@@ -30,7 +30,7 @@ While True:
         for i in range(0,len(mlist)-1):
             encryption.append(mlist[i]+klist[i])
         new=[]
-        count(len(associations))
+        count=(len(associations))
         for i in encryption:
             if i>=(count-1):
                 multiple=i//count+1
@@ -55,7 +55,7 @@ While True:
         for i in range(0,len(mlist)-1):
             decryption.append(mlist[i]-klist[i])
         new=[]
-        count(len(associations))
+        count=(len(associations))
         for i in decryption:
             if i<0:
                 num=(count-1)+i
