@@ -13,7 +13,7 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 while True:
     inpt=input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if inpt=='q':
-        print("Goodbye")
+        print("Goodbye!")
         break
     elif inpt=='e':
         m=input("Message: ")
