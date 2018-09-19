@@ -67,7 +67,7 @@ while True:
         #print(new)
         new="".join(new)
         print(new)
-        break
+
     else:
         print("Did not understand command, try again")
         continue
